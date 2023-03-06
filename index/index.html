@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Personal Website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #ADD8E6;
+		}
+		
+		/* Header */
+		header {
+			background-color: #333;
+			color: #8ccd9f;
+			padding: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.logo {
+			font-size: 32px;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin: 0;
+		}
+
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+
+		nav li {
+			margin-right: 20px;
+		}
+
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: bold;
+			transition: all 0.3s ease;
+		}
+
+		nav a:hover {
+			color: #f9a602;
+		}
+		#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+		/* Main Content */
+		main {
+			padding: 40px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+			background-color: #eef1ab;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			margin: 20px;
+		}
+
+		section {
+			flex: 1;
+			margin: 20px;
+		}
+
+		h2 {
+			font-size: 24px;
+			color: #333;
+			margin-top: 0;
+		}
+
+		p {
+			line-height: 1.5;
+			margin: 0 0 20px 0;
+			color: #666;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			color: #666;
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			color: #666;
+		}
+
+		table th {
+			background-color: #f9a602;
+			color: #fff;
+			padding: 10px;
+			font-weight: bold;
+			text-align: left;
+		}
+
+		table td {
+			padding: 10px;
+			border-bottom: 1px solid #ddd;
+			text-align: left;
+		}
+
+		form label {
+			display: block;
+			font-size: 16px;
+			color: #333;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+
+		form input[type=text],
+		form input[type=email],
+		form textarea {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			margin-bottom: 20px;
+			font-size: 16px;
+			color: #333;
+			box-sizing: border-box;
+		}
+
+		form textarea {
+			height: 150px;
+		}
+
+		form input[type=submit] {
+
+
+			background-color: #f9a602;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		form input[type=submit]:hover {
+			background-color: #333;
+			color: #fff;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+			display: block;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+		}
+
+		/* Footer */
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.footer-links a {
+			color: #fff;
+			text-decoration: none;
+			margin-right: 10px;
+			font-size: 16px;
+			font-weight: bold;
+			transition: all 0.3s ease;
+		}
+
+		.footer-links a:hover {
+			color: #f9a602;
+		}
+
+		@media (max-width: 768px) {
+			header {
+				flex-wrap: wrap;
+			}
+
+			nav ul {
+				flex-wrap: wrap;
+			}
+
+			nav li {
+				margin-right: 10px;
+			}
+
+			main {
+				flex-direction: column;
+			}
+
+			section {
+				margin: 10px 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- Header -->
+	<header>
+		<h1 class="logo">My Personal Website</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Main Content -->
+	<main>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+		<section>
+			<h2>About Me</h2>
+			<p>Hello, my name is Chan Ngai Fung and I am a year 1 student in the Game Design and Animation program at HKBU.
+				 As a passionate game design student,
+				  I have gained valuable experience in various programming languages such as HTML, CSS, PHP, and Java. Additionally,
+				   I am proficient in using software such as Maya, Unity, and 3DS Max to create visually stunning games.
+				    In my free time, I enjoy staying active by hiking and playing basketball.</p>
+			<h3>Skills</h3>
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+				<li>PHP</li>
+				<li>Maya</li>
+				<li>3DS Max</li>
+				<li>Unity</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Portfolio</h2>
+			<img src="image/3.png">
+			<table>
+				<thead>
+					<tr>
+						<th>Project</th>
+						<th>Description</th>
+						<th>Link</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Portfolio</td>
+						<td>I am a student in the Game Design and Animation program, this link show same work from me!</td>
+						<td><a href="https://thomasqqchan.wixsite.com/tc0406">Portfolio</a></td>
+						
+					</tr>
+					<tr>
+						<td>Project 1
+							
+						</td>
+						<td>This project call"Nightmare Spooky House", I did this game with my friends,
+							 my position in this project is game design!</td>
+						<td><a href="https://youtu.be/QBwyg3bEN4Y"><img src="image/2.png"></a></td>
+						
+					</tr>
+					<tr>
+						<td>Project 2</td>
+						<td>This project call"Contract 666", I did this game with my friends,
+							 my position in this project is game design! And we jion Global Game Jam by using this project!</td>
+						<td><a href="https://youtu.be/gmwjtSpmJHg"><img src="image/1.png"></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<h2>Contact</h2>
+			<form>
+				<label for="name">Name</label>
+				<input type="text" id="name" name="name" required>
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" required>
+				<label for="message">Message</label>
+				<textarea id="message" name="message" required></textarea>
+				<input type="submit" value="Send">
+			</form>
+
+			
+
+		</section>
+		
+		
+	</main>
+<main>
+
+<section>
+	<h2>example 1</h2>
+	<iframe width="640" height="480" src="https://www.youtube.com/embed/ztzht_9ZJdM" title="Game Title Nightmare spooky house" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	   
+	</section>
+
+	<section>
+		<h2>example 2</h2>
+		<iframe width="640" height="480" src="https://www.youtube.com/embed/muO54_BLj0Q" title="Internship Game Prototype" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</main>
+	<!-- Footer -->
+<footer>
+	<div class="footer-links">
+		<a href="#">Home</a>
+		
+		<a href="#">About</a>
+	<a href="#">Portfolio</a>
+	<!--	<form action="/Portfolio.php"  id="form1"  >    			
+			<button   class="button button1"  >Portfolio</button>
+			</form>-->
+		<a href="#">Contact</a>
+	</div>
+
+	
+	<p>&copy; 2023 My Personal Website</p>
+</footer>
+<script>
+        
+	var mybutton = document.getElementById("myBtn");               
+	window.onscroll = function() {scrollFunction()};
+	
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+	
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+	</script>
+</body>
+</html>
